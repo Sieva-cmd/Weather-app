@@ -10,12 +10,13 @@ function App() {
 
        <>
        <div className='search'>
-        <input   type='text' placeholder='search by Longitude' />
+        <input type='text' placeholder='search by Name' />
        </div>
-       <div className='App'>
+       <div className='app'>
         <h1> Nairobi</h1>
         <h2>22°</h2>
        </div>
+       
        <div className='elements'>
         <div><i className="fa-solid fa-temperature-snow">Temp</i> </div>
         <div> <p>  <i className="fa-solid fa-wind">Wind</i></p></div>

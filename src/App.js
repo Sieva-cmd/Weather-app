@@ -4,7 +4,7 @@ import {useState} from 'react'
 
 function App() {
 
-// const url = "https://api.open-meteo.com/v1/forecast?latitude=-1.2762&longitude=36.7965&hourly=temperature_2m,relativehumidity_2m,cloudcover_mid,windspeed_120m&current_weather=true"
+const url = "https://api.open-meteo.com/v1/forecast?latitude=-1.2762&longitude=36.7965&hourly=temperature_2m,relativehumidity_2m,cloudcover_mid,windspeed_120m&current_weather=true"
 
     return (
 

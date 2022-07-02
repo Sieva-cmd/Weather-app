@@ -11,22 +11,30 @@ const weather ={
 function App() {
 
 const  [data,setData] = useState({});
-const [location,setLocation] =useState('')
+const [longitude,setLongitude] =useState('')
+const [latitude,setLatitude] =useState('')
 
 
-const url = "https://api.open-meteo.com/v1/forecast?latitude=-1.2762&longitude=36.7965&hourly=temperature_2m,relativehumidity_2m,cloudcover_mid,windspeed_120m&current_weather=true"
+
+const url = "https://api.open-meteo.com/v1/forecast?latitude={}&longitude={}&hourly=temperature_2m,relativehumidity_2m,cloudcover_mid,windspeed_120m&current_weather=true"
 
 const searchLoction =(event) =>{
-  axios.get(url).then((response) =>{
-    setData(response.data)
-    console.log(response.data)
-  })
-  setLocation('')
+  if (event.key === 'enter'){
+    axios.get(url).then((response) =>{
+      setData(response.data)
+      console.log(response.data)
+    })
+  
+  
+  setLongitude('')
+  setLatitude('')
+}
 }
 
     return (
 
        <>
+       <div className='main'>
        <div className='search'>
         <input type='text' placeholder='search by Name' />
        </div>
@@ -58,6 +66,8 @@ const searchLoction =(event) =>{
          <div><p>17:00 pm</p></div>
          <div><p>18:00 pm</p></div>
        </div>
+       </div>
+       
        
        </>
     );

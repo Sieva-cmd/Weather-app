@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './App.css';
 import {useState} from 'react'
 import axios from 'axios'
@@ -11,7 +11,7 @@ const weather ={
 function App() {
 
 const  [data,setData] = useState({});
-const [longitude,setLongitude] =useState('')
+const [state,setLongitude] =useState('')
 const [latitude,setLatitude] =useState('')
 
 
@@ -36,7 +36,11 @@ const searchLoction =(event) =>{
        <>
        <div className='main'>
        <div className='search'>
-        <input type='text' placeholder='search by Name' />
+        <input type='text' value={longitude}
+        onChange={event => setLongitude(event.target.value)}
+        onKeyPress ={searchLoction}
+   
+        placeholder='search by Name' />
        </div>
        <div className='app'>
         <h1> Nairobi</h1>

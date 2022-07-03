@@ -11,24 +11,28 @@ const weather ={
 function App() {
 
 const  [data,setData] = useState({});
-const [state,setLongitude] =useState('')
-const [latitude,setLatitude] =useState('')
+const [newLongitude,setLongitude] =useState('')
+const [newLatitude,setLatitude] =useState('')
 
 
 
 const url = "https://api.open-meteo.com/v1/forecast?latitude={}&longitude={}&hourly=temperature_2m,relativehumidity_2m,cloudcover_mid,windspeed_120m&current_weather=true"
 
-const searchLoction =(event) =>{
+const searchLocation =(event) =>{
   if (event.key === 'enter'){
     axios.get(url).then((response) =>{
       setData(response.data)
       console.log(response.data)
     })
-  
-  
+
   setLongitude('')
   setLatitude('')
 }
+const initialValues ={
+  longitude: "",
+  latitude :"",
+};
+
 }
 
     return (
@@ -36,11 +40,18 @@ const searchLoction =(event) =>{
        <>
        <div className='main'>
        <div className='search'>
-        <input type='text' value={longitude}
+        <form>
+        <input type='text' value={newLongitude}
         onChange={event => setLongitude(event.target.value)}
-        onKeyPress ={searchLoction}
-   
+        label="longitude"
         placeholder='search by Name' />
+          <input type='text' value={newLatitude}
+        onChange={event => setLatitude(event.target.value)}
+        label="latitude"
+        placeholder='search by Name' />
+        <button onSubmit={searchLocation}> Submit</button>
+        </form>
+      
        </div>
        <div className='app'>
         <h1> Nairobi</h1>

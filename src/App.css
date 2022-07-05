@@ -1,5 +1,6 @@
 * {
     color: white;
+    text-align: center;
 }
 
 .app {
@@ -11,17 +12,23 @@
     display: flex;
     justify-content: space-evenly;
     font-weight: bold;
+    clear: right;
+    text-align: center;
 }
 
-.main ::before {
-    content: '';
-    background: url('./assets/sunset.jpg') no-repeat center center/cover;
-    position: absolute;
+.heading {
+    clear: right;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.main {
+    background: url('./assets/night.jpg') no-repeat center center/cover;
+    background-size: cover;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     z-index: -1;
+    text-align: center;
 }
 
 .hours {
@@ -33,8 +40,8 @@
 
 .search {
     float: right;
-    margin-right: 100px;
-    margin-top: 100px;
+    margin-right: 50px;
+    margin-top: 50px;
 }
 
 .search input {
@@ -47,6 +54,15 @@
 
 ::placeholder {
     color: black
+}
+
+.mapping,
+.three,
+.one,
+.two,
+.weather {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .App-logo {

@@ -10,7 +10,7 @@ const App =() =>{
   const [data,setData] =useState([]);
   const[latitude,  setLatitude] =useState('');
   const [longitude, setLongitude] =useState('');
-  const API_URL =`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,cloudcover,cloudcover_mid,windspeed_120m`
+  const API_URL =`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,cloudcover_mid,windspeed_120m&daily=sunrise,sunset&current_weather=true&timezone=Africa%2FCairo`
 
 
 
@@ -57,16 +57,35 @@ const App =() =>{
       </div>
 
       <div className='elements'>
-      <div> Temp {data.hourly_units? <p>{data.hourly_units.temperature_2m} </p>:null }
+      
+      <div> Temp 
+      {data.current_weather? <p>{data.current_weather.temperature}
+
+      {data.hourly_units? <small>{data.hourly_units.temperature_2m} </small>:null }
+       </p>:null }
+      
       </div>
-      <div> Wind<p>{data.hourly_units? <p>{data.hourly_units.windspeed_120m} </p>:null }</p>
+      <div> Wind
+        {data.current_weather?<p>{data.current_weather.windspeed} 
+        {data.hourly_units? <small>{data.hourly_units.windspeed_120m} </small>:null } 
+        </p>:null }
+        
       </div>
-      <div>Cloud cover <p> {data.hourly_units? <p>{data.hourly_units.cloudcover_md} </p>:null }</p>
+      <div>Cloud cover 
+       {data.current_weather?<p>{data.current_weather.cloudcover_md}:
+       {data.hourly_units? <small>{data.hourly_units.cloudcover_md} </small>:null }
+       </p>:null}
+        
       </div>
-      <div> <p>Humid {data.hourly_units? <p>{data.hourly_units.relativehumidity_2m} </p>:null }</p>
+      <div> Humid 
+        {data.current_weather?<p>{data.current_weather.relativehumidity_2m} 
+        {data.hourly_units? <small>{data.hourly_units.relativehumidity_2m} </small>:null }
+        :</p>:null}
+        
       </div>
 
       </div>
+    
      
     </div>
          

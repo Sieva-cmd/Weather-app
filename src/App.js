@@ -37,7 +37,7 @@ const App =() =>{
     <>
 
     <div className='main'>
-      <h1 className='header'>CYWEATHER WEATHER FOCUST SYSTEM</h1>
+      <h1 className='header'>CYWEATHER WEATHER FORECAST SYSTEM</h1>
     <div className='search'>
         <input
           value={longitude}

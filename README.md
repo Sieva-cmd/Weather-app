@@ -29,6 +29,9 @@ This application displays current weather as well as hourly weather from 6am to 
 - install git
 - install react modules
 
+## Live Link
+https://cyweather1.herokuapp.com/
+
 
 ## Technology used
 - Reactjs

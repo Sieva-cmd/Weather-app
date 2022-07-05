@@ -4,6 +4,11 @@ import { useState } from 'react';
 import './App.css'
 import React, {useEffect} from 'react';
 import axios from 'axios'
+import * as Unicons from '@iconscout/react-unicons';
+import { UilTemperaturePlus } from '@iconscout/react-unicons'
+import { UilWind } from '@iconscout/react-unicons'
+import { UilClouds } from '@iconscout/react-unicons'
+import { UilTemperature } from '@iconscout/react-unicons'
 
 
 const App =() =>{
@@ -52,26 +57,26 @@ const App =() =>{
       <div className='elements'>
        
       
-            <div> Temp 
+            <div> Temp <Unicons.UilTemperaturePlus /> 
             {data.current_weather? <p>{data.current_weather.temperature}
 
             {data.hourly_units? <small>{data.hourly_units.temperature_2m} </small>:null }
             </p>:null }
             
             </div>
-            <div> Wind
+            <div> Wind <Unicons.UilWind />  
               {data.current_weather?<p>{data.current_weather.windspeed} 
               {data.hourly_units? <small>{data.hourly_units.windspeed_120m} </small>:null } 
               </p>:null }
               
             </div>
-            <div>Cloud cover 
+            <div>Cloud cover <Unicons.UilClouds />
             {data.current_weather?<p>{data.current_weather.cloudcover_md}:
             {data.hourly_units? <small>{data.hourly_units.cloudcover_md} </small>:null }
             </p>:null}
               
             </div>
-            <div> Humid 
+            <div> Humid  <Unicons.UilTemperature />
               {data.current_weather?<p>{data.current_weather.relativehumidity_2m} 
               {data.hourly_units? <small>{data.hourly_units.relativehumidity_2m} </small>:null }
               :</p>:null}

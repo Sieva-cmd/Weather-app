@@ -63,6 +63,12 @@
 .weather {
     display: flex;
     justify-content: space-evenly;
+    border: 2px solid rgb(247, 98, 98);
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .App-logo {

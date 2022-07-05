@@ -9,6 +9,7 @@ import { UilTemperaturePlus } from '@iconscout/react-unicons'
 import { UilWind } from '@iconscout/react-unicons'
 import { UilClouds } from '@iconscout/react-unicons'
 import { UilTemperature } from '@iconscout/react-unicons'
+import { UilForecastcloudMoonTear } from '@iconscout/react-unicons'
 
 
 const App =() =>{
@@ -207,9 +208,16 @@ const App =() =>{
       <p>Wind {data.hourly ?<small>{data.hourly.windspeed_120m[18]} </small>:null }km/h </p>
       </div>
     </div>
+    <footer className='footer'>
+       <Unicons.UilForecastcloudMoonTear />
+    
+      <p>  Designed and developed by:musyokasieva@gmail.com</p>
+      <p>Cyweather forecast system</p>
+    </footer>
     
      
     </div>
+   
          
 </>
 

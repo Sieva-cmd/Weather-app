@@ -9,8 +9,8 @@ This is a weather application where one can do weather focusting using longitude
 This application displays current weather as well as hourly weather from 6am to 6pm
 
 ## website image
-![weather app]()
-![weather app]()
+![weather app](https://github.com/Sieva-cmd/Weather-app/blob/master/src/assets/web.jpg)
+![weather app](https://github.com/Sieva-cmd/Weather-app/blob/master/src/assets/web2.JPG)
 
 
 
@@ -21,7 +21,7 @@ This application displays current weather as well as hourly weather from 6am to 
 - cd to your project folder
 - if you don't have a folder cd Documents and mkdir myProject
 - cd myProject and write the command below to clone repository
-- git clone https://github.com/Sieva-cmd/.git
+- git clone gh repo clone Sieva-cmd/Weather-app
 - Bingo! You have weather application in your machine
 
 ## Requirements
